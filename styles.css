@@ -1,0 +1,190 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav ul{
+    position: sticky;
+    display: flex;
+    background-color: black;
+    color: white;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    height: 65px;
+}
+nav ul li{
+    padding: 10px;
+}
+nav ul li:hover{
+    cursor: pointer;
+}
+nav ul li img{
+    width: 2.5rem;
+}
+nav ul li:first-child{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: larger;
+}
+.contain{
+    position: relative;
+    height: 85vh;
+    background-color: rgb(41, 40, 40);
+    display: flex;
+    flex-direction: row;
+}
+.contain .playlist{
+    position: sticky;
+    overflow: auto;
+    width: 25vh;
+    background-color: black;
+    height: 100vh;
+    color: white;
+    max-height: 100%;
+}
+.contain .playlist ul{
+    display: flex;
+    flex-direction: column;
+}
+.contain .playlist h1{
+    margin-bottom: 20px;
+}
+.contain .playlist ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contain .playlist ul li button:first-child{
+    width: 100%;
+    background-color: rgb(36, 35, 35);
+    color: white;
+    border: 0.05rem solid red;
+    padding: 10px;
+    border-radius: 5px;
+}
+.contain .playlist ul li button:last-child{
+    background-color: rgb(36, 35, 35);
+    border: 0.1px solid red;
+}
+.contain .playlist ul li .playlist-song-delete:hover{
+    background-color: black;
+}
+.contain .playlist ul li .playlist-song-delete:active{
+    background-color: brown;
+}
+.contain .playlist ul li .playlist-song-info:focus{
+    background-color: black;
+}
+.playlist-song-title{
+    font-weight: 600;
+    font-size: large;
+}
+#reset{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+#reset:hover{
+    background-color: red;
+}
+#reset:active{
+    background-color: tomato;
+}
+.contain .song-window{
+    height: 77vh;
+    width: 75vh;
+    margin: auto;
+}
+.contain .song-window .song-image{
+    width: 75%;
+    margin: 50px auto 10px auto;
+}
+.song-image img{
+    width: 100%;
+    border-radius: 2%;
+    box-shadow: 0 0 10px black;
+}
+.song-info{
+    border-radius: 25px;
+    box-shadow: inset 0 0 10px red;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: red;
+    font-size: larger;
+    justify-content: center;
+    padding: 20px;
+}
+.audiobar{
+    position: sticky;
+    background-color: black;
+    height: 15vh;
+    bottom: 0;
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.range-bar{
+    color: white;
+}
+.audiobar .range-bar input{
+    width: 55vh;
+    accent-color: red;
+}
+.audiobar .icons{
+    display: flex;
+    gap: 20px;
+} 
+.audiobar .icons:hover{
+    cursor: pointer;
+}
+/*Scrollbar*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-track{
+    border: 1px solid gray;
+    box-shadow: inset 0 0 5px white;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: tomato;
+}
+
+/*responsive*/
+@media (max-width: 729px) and (min-height: 0px){
+    nav ul{
+        width: 100vh;
+    }
+    .contain{
+        flex-direction: column;
+        width: 100vh;
+        height: 175vh;
+    }
+    .contain .song-window{
+        margin: 100px auto 0px auto;
+    }
+    .contain .playlist{
+        width: 100vh;
+        height: 25vh;
+    }
+    .audiobar{
+        position: sticky;
+        bottom: 0;
+        width: 100vh;
+    }
+}

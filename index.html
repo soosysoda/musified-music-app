@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"">
+        <title>Musified - Your Own AudioBook</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="C.png">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><img class="logo" src="C.png">Musified</li>
+                <li onclick="alert('Feature coming soon!!')">Request Song <i>(Feature coming soon!)</i></li>
+            </ul>
+        </nav>
+        <div class="contain">
+            <div class="playlist">
+                <h1>Your Playlist</h1>
+                <ul id="playlist-songs">
+                    
+                </ul>
+            </div>
+            <div class="song-window">
+                <div class="song-image">
+                    <img id ="image" src="C.png">
+                </div>
+                <div class="song-info">
+                    <span id="song-title"></span>
+                    <span id="song-artist"></span>
+                    <span id="song-duration"></span>
+                </div>
+            </div>
+        </div>
+        <div class="audiobar">
+            <div class="range-bar">
+                <span id="timer">0:00</span>
+                <input type="range" name="range" id="progressBar" value="0" min="0" max="100">
+                <span id="dur">4:00</span>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-3x fa-backward" style="color: red;" id="previous"></i>
+                <i class="fa-solid fa-3x fa-play" style="color: red;" id="play"></i>
+                <i class="fa-solid fa-3x fa-forward" style="color: red;" id="next"></i>
+                <i class="fa-solid fa-3x fa-shuffle" style="color: red;" id="shuffle"></i>
+            </div>
+        </div>
+    </body>
+    <script src="https://kit.fontawesome.com/61adb9e852.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</html>
